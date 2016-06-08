@@ -456,7 +456,7 @@ section.bg-image {
 .home .president-wrap .president {
     background: url('/wp-content/uploads/sites/1085/2015/11/benardo-bg.png');
     background-size: cover;
-    background-repeat: none;
+    background-repeat: no-repeat;
 }
 
 .home .president-wrap p.p-pad {
