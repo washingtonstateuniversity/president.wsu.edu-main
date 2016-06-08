@@ -1148,7 +1148,7 @@ ul.org-chart.reporting-units-block li ul.tier-2-block li.tier-2.director a.first
 }
 
 .section-wrapper.dept-college.angle-bg {
-    padding: initial;
+    padding: inherit;
 }
 
 .dept-college .college-dept-wrap {
