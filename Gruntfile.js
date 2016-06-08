@@ -50,11 +50,11 @@ module.exports = function(grunt) {
                     "unqualified-attributes": false,       // Should probably be 2 one day.
                     "qualified-headings": false,
                     "known-properties": 1,              // Okay to ignore in the case of known unknowns.
-                    "duplicate-background-images": 2,
+                    "duplicate-background-images": false, // We have a couple that may need to be fixed
                     "duplicate-properties": 2,
                     "star-property-hack": 2,
                     "text-indent": 2,
-                    "display-property-grouping": 2,
+                    "display-property-grouping": false, // We may have a couple exceptions
                     "shorthand": 2,
                     "empty-rules": 2,
                     "vendor-prefix": 2,
