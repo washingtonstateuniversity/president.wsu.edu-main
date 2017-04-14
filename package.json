@@ -1,6 +1,6 @@
 {
   "name": "president.wsu.edu-main",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/washingtonstateuniversity/president.wsu.edu-main"
@@ -10,8 +10,8 @@
     "grunt": "~1.0.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "~1.0.0",
-    "grunt-contrib-csslint": "^1.0.0",
-    "grunt-contrib-cssmin": "~1.0.1",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-cssmin": "~2.0.0",
     "grunt-postcss": "^0.8.0",
     "grunt-phpcs": "^0.4.0"
   }
