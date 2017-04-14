@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://web.wsu.edu
  Template:       spine
- Version:        0.0.3
+ Version:        0.0.4
 */
 
 #spine #glue:before {
@@ -1076,11 +1076,12 @@ li.li-hide {
 
 /******* ORG CHART ********/
 ul.org-chart {
-    -ms-flex-flow: row;
-        flex-flow: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
-                -ms-grid-row-align: center;
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
