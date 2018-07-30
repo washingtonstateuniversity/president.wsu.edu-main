@@ -629,8 +629,7 @@ section.bg-image {
 .f1_container {
     position: relative;
     z-index: 1;
-    -webkit-perspective: 1000px;
-            perspective: 1000px;
+    perspective: 1000px;
     cursor: pointer;
     /*flex: 1;*/
     float: left;
@@ -653,15 +652,12 @@ section.bg-image {
     text-align: center;
     width: 100%;
     height: 100%;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transition: all .4s linear;
+    transform-style: preserve-3d;
     transition: all .4s linear;
 }
 
 .f1_container:hover .f1_card {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .face {
@@ -687,8 +683,7 @@ section.bg-image {
     width: 100%;
     height: 100%;
     display: block;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
     box-sizing: border-box;
     text-align: center;
     position: absolute;
@@ -1076,16 +1071,12 @@ li.li-hide {
 
 /******* ORG CHART ********/
 ul.org-chart {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-flow: row;
+        flex-flow: row;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     width: 100%;
     padding-left: 0;
 }
@@ -1136,12 +1127,10 @@ ul.org-chart li ul.tier-2-block li ul.tier-3-block li ul.tier-4-block li a:after
 }
 
 ul.org-chart li ul.tier-2-block {
-    display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
     width: 100%;
 }
 
@@ -1206,31 +1195,25 @@ ul.org-chart.reporting-units-block li ul.tier-2-block li.tier-2.director a.first
 
 @media screen and (max-width: 691px) {
     ul.org-chart.reporting-units-block li.provost {
-        -webkit-box-ordinal-group: 2;
-            -ms-flex-order: 1;
-                order: 1;
+        -ms-flex-order: 1;
+            order: 1;
     }
 
     ul.org-chart.reporting-units-block li.chancellors {
-        -webkit-box-ordinal-group: 3;
-            -ms-flex-order: 2;
-                order: 2;
+        -ms-flex-order: 2;
+            order: 2;
     }
 
     ul.org-chart.reporting-units-block li.director {
-        -webkit-box-ordinal-group: 4;
-            -ms-flex-order: 3;
-                order: 3;
+        -ms-flex-order: 3;
+            order: 3;
     }
 
     ul.org-chart li ul.tier-2-block {
-        display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     }
 
     ul.org-chart li {
