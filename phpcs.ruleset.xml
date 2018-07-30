@@ -1,13 +1,34 @@
 <?xml version="1.0"?>
-<ruleset name="WSU President Theme">
-    <description>Sniffs for the coding standards of the WSU President Theme</description>
+<ruleset name="WSUWP Themes">
 
-    <rule ref="WordPress-Extra">
-        <exclude name="WordPress.NamingConventions.ValidFunctionName" />
-        <exclude name="WordPress.Files.FileName" />
-        <exclude name="WordPress.XSS.EscapeOutput" />
-        <exclude name="Generic.Formatting.DisallowMultipleStatements" />
-        <exclude name="WordPress.PHP.StrictComparisons" />
-        <exclude name="WordPress.WP.EnqueuedResources" />
-    </rule>
+	<!--
+		Config flags for PHPCS
+		s flag: Show sniff codes in all reports.
+		v flag: Print verbose output.
+	-->
+	<arg value="sv"/>
+
+	<!-- Use a more colorful output -->
+	<arg name="colors" />
+
+	<!-- Check only PHP files -->
+	<arg name="extensions" value="php"/>
+
+	<!-- Check all files in this directory and the directories below it. -->
+	<file>.</file>
+
+	<description>Sniffs for PHP coding standards used by WSUWP Themes</description>
+
+	<rule ref="WordPress-Extra">
+		<exclude name="WordPress.NamingConventions.ValidFunctionName" />
+		<exclude name="WordPress.Files.FileName" />
+		<exclude name="WordPress.Arrays.MultipleStatementAlignment.DoubleArrowNotAligned" />
+		<exclude name="Squiz.PHP.EmbeddedPhp.NoSemicolon" />
+		<exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeEnd" />
+		<exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeOpen" />
+		<exclude name="Squiz.PHP.EmbeddedPhp.ContentAfterOpen" />
+		<exclude name="Squiz.PHP.EmbeddedPhp.ContentAfterEnd" />
+		<exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace" />
+		<exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning" />
+	</rule>
 </ruleset>
