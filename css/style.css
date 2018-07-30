@@ -508,8 +508,7 @@ section.bg-image {
 
 .angle-bg {
 	padding: 50px 0;
-	background: rgba(255, 255, 255, 1);
-	background: url(/wp-content/uploads/sites/1085/2015/11/bg-lines-angle-drk.png) repeat left top;
+	background: #fff url(/wp-content/uploads/sites/1085/2015/11/bg-lines-angle-drk.png) repeat left top;
 }
 
 .home #binder.fluid.max-1188 .home-footer .row {
@@ -650,8 +649,7 @@ section.bg-image {
 }
 
 .back {
-	background: rgba(255, 255, 255, 1);
-	background: url(/wp-content/uploads/sites/1085/2015/11/bg-lines-angle-drk.png) repeat left top;
+	background: #fff url(/wp-content/uploads/sites/1085/2015/11/bg-lines-angle-drk.png) repeat left top;
 	box-sizing: border-box;
 	padding: 1em;
 }
@@ -1088,8 +1086,7 @@ ul.org-chart li {
 }
 
 ul.org-chart li.tier-1 a.angle-bg {
-	background: rgba(255, 255, 255, 1);
-	background: url(/wp-content/uploads/sites/1085/2015/11/bg-lines-angle-drk.png) repeat left top;
+	background: #fff url(/wp-content/uploads/sites/1085/2015/11/bg-lines-angle-drk.png) repeat left top;
 }
 
 ul.org-chart li.tier-1 a {
