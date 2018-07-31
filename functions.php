@@ -2,8 +2,19 @@
 
 require_once __DIR__ . '/includes/comments.php';
 
+add_filter( 'spine_child_theme_version', 'wsu_president_theme_version' );
 add_filter( 'getarchives_where', 'wsu_president_filter_archives' );
 add_filter( 'ppp_nonce_life', 'wsu_president_filter_ppp_nonce_life' );
+
+/**
+ * Provides a theme version for use in cache busting.
+ *
+ * @since  0.1.0
+ * @return string
+ */
+function wsu_president_theme_version() {
+	return '0.1.0';
+}
 
 /**
  * Only display monthly archive links from March 2016.
