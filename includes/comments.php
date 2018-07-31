@@ -3,6 +3,7 @@
 namespace WSU\President\Comments;
 
 add_filter( 'comment_form_fields', __NAMESPACE__ . '\\form_fields' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_comments_reply' );
 
 /**
  * Removes the URL field from the comment form.
@@ -21,6 +22,17 @@ function form_fields( $fields ) {
 	$fields['comment'] = $comment_field;
 
 	return $fields;
+}
+
+/**
+ * Enqueue the comment reply script from WordPress core.
+ *
+ * @since  0.1.0
+ */
+function enqueue_comments_reply() {
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) > 0 ) {
+		wp_enqueue_script( 'comment-reply', 'wp-includes/js/comment-reply', array(), spine_get_child_version(), true );
+	}
 }
 
 /**
