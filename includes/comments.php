@@ -30,7 +30,7 @@ function form_fields( $fields ) {
  * @since  0.1.0
  */
 function enqueue_comments_reply() {
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) > 0 ) {
+	if ( 'facsen.wsu.edu' === get_site()->domain && is_singular() && comments_open() && get_option( 'thread_comments' ) > 0 ) {
 		wp_enqueue_script( 'comment-reply', 'wp-includes/js/comment-reply', array(), spine_get_child_version(), true );
 	}
 }
