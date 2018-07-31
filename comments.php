@@ -19,9 +19,9 @@ if ( post_password_required() ) {
 
 		<h2 class="comments-title"><?php WSU\President\Comments\display_title(); ?></h2>
 
-		<ul class="comment-list">
+		<div class="comment-list">
 			<?php wp_list_comments( WSU\President\Comments\list_arguments() ); ?>
-		</ul>
+		</div>
 
 		<?php the_comments_pagination(); ?>
 
@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 	if ( is_user_logged_in() ) {
 		comment_form( WSU\President\Comments\form_arguments() );
 	} elseif ( comments_open() ) {
-		?><p class="login-to-comment">Please <a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>" title="Login">Login</a> to comment.</p><?php
+		?><p class="login-to-comment">Please <a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>">login to comment</a>.</p><?php
 	}
 	?>
 
