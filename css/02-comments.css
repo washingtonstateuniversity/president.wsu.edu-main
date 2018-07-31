@@ -1,0 +1,104 @@
+.comment-list > div:last-of-type {
+	border-bottom: 1px rgba(127, 127, 127, .2) solid;
+}
+
+.comment-author {
+	color: #3c3c3c;
+}
+
+.comment-author .says {
+	display: none;
+}
+
+.comment-body {
+	margin-bottom: 2.5em;
+}
+
+.comment-meta {
+	margin-top: 0;
+	padding-top: 2em;
+}
+
+.comment-metadata {
+	font-size: 12px;
+}
+
+.comment-metadata > a {
+	border-bottom: 0;
+}
+
+.comment-metadata .edit-link {
+	float: right;
+}
+
+.comment-content,
+.comment-body .reply,
+.comment #respond,
+.comment.depth-2 {
+	padding: 0 1em;
+}
+
+.comment-content {
+	padding-top: 1.6em;
+}
+
+.comment-body .reply {
+	text-align: right;
+}
+
+.comment-reply-link {
+	position: relative;
+}
+
+a.comment-reply-link:after {
+	content: " \21b5";
+}
+
+.comments-pagination {
+	margin: 3em 0;
+	text-align: center;
+	position: relative;
+}
+
+.comments-pagination .page-numbers {
+	display: inline-block;
+	font-weight: 700;
+	padding: .25em .5em;
+}
+
+.comments-pagination .page-numbers.current,
+.comments-pagination .page-numbers.current:hover {
+	border-bottom: 1px solid transparent;
+	color: #3c3c3c;
+}
+
+.comments-pagination .prev {
+	left: 0;
+	position: absolute;
+}
+
+.comments-pagination .next {
+	position: absolute;
+	right: 0;
+}
+
+#reply-title {
+	align-items: baseline;
+	display: flex;
+}
+
+#reply-title small {
+	font-size: 14px;
+	font-weight: 300;
+	margin-left: auto;
+}
+
+.logged-in-as {
+	display: none;
+}
+
+.no-comments,
+.login-to-comment {
+	color: #737373;
+	padding-top: 1.6em;
+}
