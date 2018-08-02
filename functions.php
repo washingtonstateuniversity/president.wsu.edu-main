@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/includes/comments.php';
+require_once __DIR__ . '/includes/voting.php';
 
 add_filter( 'spine_child_theme_version', 'wsu_president_theme_version' );
 add_filter( 'getarchives_where', 'wsu_president_filter_archives' );

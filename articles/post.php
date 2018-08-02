@@ -71,6 +71,24 @@
 	<?php endif; ?>
 
 	<?php
+	// Load up the voting template and enqueue the requiredd assets for it
+	// if this is the faculty senate site, the current user is logged in,
+	// and voting is enabled for the post.
+	$voting = get_post_meta( get_the_ID(), '_wsu_votes', true );
+
+	if ( 'facsen.wsu.edu' === get_site()->domain && is_user_logged_in() && 'enabled' === $voting ) :
+		wp_enqueue_script( 'wsu-voting', get_stylesheet_directory_uri() . '/js/voting-booth.js', array( 'jquery' ), spine_get_child_version(), true );
+
+		wp_localize_script( 'wsu-voting', 'voting_booth', array(
+			'ajax_url' => admin_url( 'admin-ajax.php' ),
+			'nonce' => wp_create_nonce( 'wsu-voting' ),
+		) );
+
+		get_template_part( 'parts/voting-booth' );
+	endif;
+	?>
+
+	<?php
 	// Load up the comment template if this is the faculty senate site
 	// and comments are open or the post has at least one comment.
 	if ( 'facsen.wsu.edu' === get_site()->domain && ( comments_open() || get_comments_number() ) ) :
