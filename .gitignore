@@ -4,3 +4,4 @@ vendor
 composer.lock
 tmp-style.css
 tmp-style.css.map
+style.css.map
