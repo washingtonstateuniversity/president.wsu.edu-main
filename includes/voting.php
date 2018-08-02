@@ -143,6 +143,7 @@ function cast_vote() {
  *
  * @since  0.1.0
  * @param  int $id The ID of the post for which to retrieve the vote tally.
+ * @return int
  */
 function tally( $id ) {
 	$votes_for = get_post_meta( $id, '_wsu_votes_for', true );
