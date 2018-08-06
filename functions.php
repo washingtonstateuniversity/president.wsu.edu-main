@@ -16,7 +16,7 @@ add_filter( 'ppp_nonce_life', 'wsu_president_filter_ppp_nonce_life' );
  * @return string
  */
 function wsu_president_theme_version() {
-	return '0.1.0';
+	return '0.1.1';
 }
 
 /**
