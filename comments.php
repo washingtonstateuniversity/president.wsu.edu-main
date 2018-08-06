@@ -34,10 +34,8 @@ if ( post_password_required() ) {
 	}
 
 	// Only allow comments from logged-in users.
-	if ( is_user_logged_in() ) {
+	if ( comments_open() ) {
 		comment_form( WSU\President\Comments\form_arguments() );
-	} elseif ( comments_open() ) {
-		?><p class="login-to-comment">Please <a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>">login to comment</a>.</p><?php
 	}
 	?>
 
