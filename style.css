@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://web.wsu.edu
  Template:       spine
- Version:        0.1.0
+ Version:        0.1.1
 */
 
 #spine #glue:before {
@@ -1347,18 +1347,40 @@ a.comment-reply-link:after {
 	display: flex;
 }
 
+#reply-title a {
+	margin-left: 1ch;
+}
+
 #reply-title small {
 	font-size: 14px;
 	font-weight: 300;
 	margin-left: auto;
 }
 
-.logged-in-as {
-	display: none;
+.comment-form label {
+	color: #737373;
+	font-size: .9em;
+	font-weight: 300;
 }
 
-.no-comments,
-.login-to-comment {
+.comment-form #author,
+.comment-form #email,
+.comment-form #comment {
+	border: 1px solid #aaa;
+	display: block;
+	color: #737373;
+	font-family: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+
+.comment-form #author:focus,
+.comment-form #email:focus,
+.comment-form #comment:focus {
+	border: 1px solid #737373;
+	box-shadow: 0 0 2px rgba(0, 165, 189, .25);
+	color: #3c3c3c;
+}
+
+.no-comments {
 	color: #737373;
 	padding-top: 1.6em;
 }

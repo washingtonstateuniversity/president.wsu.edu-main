@@ -40,12 +40,17 @@ function display_voting_meta_box( $post ) {
 
 	?>
 	<label><input type="checkbox" name="_wsu_votes" value="enabled" <?php checked( 'enabled', $enabled ); ?>> Allow voting</label>
-	<p>
-		<span class="description">Vote tally:</span> <?php echo esc_html( $tally ); ?>
-		(<span class="description">for:</span> <?php echo esc_html( $for_count ); ?>,
-		<span class="description">against:</span> <?php echo esc_html( $against_count ); ?>)
-	</p>
 	<?php
+
+	if ( 'enabled' === $enabled || ( $votes_for || $votes_against ) ) {
+		?>
+		<p>
+			<span class="description">Vote tally:</span> <?php echo esc_html( $tally ); ?>
+			(<span class="description">for:</span> <?php echo esc_html( $for_count ); ?>,
+			<span class="description">against:</span> <?php echo esc_html( $against_count ); ?>)
+		</p>
+		<?php
+	}
 }
 
 /**
