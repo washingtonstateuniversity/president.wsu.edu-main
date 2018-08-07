@@ -106,9 +106,10 @@ function cast_vote() {
 	}
 
 	$voter_ids = get_post_meta( $post_id, '_wsu_votes_ids', true );
+	$voter_ids = ( $voter_ids ) ? $voter_ids : array();
 
 	// Bail if this user has already voted on the given post.
-	if ( $voter_ids && is_array( $voter_ids ) && in_array( wp_get_current_user()->ID, $voter_ids, true ) ) {
+	if ( in_array( wp_get_current_user()->ID, $voter_ids, true ) ) {
 		return;
 	}
 
