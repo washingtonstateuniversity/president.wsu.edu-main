@@ -1,6 +1,6 @@
 <?php
 
-if ( 'facsen.wsu.edu' === get_site()->domain || 'stage.web.wsu.edu' === get_site()->domain ) {
+if ( 'facsen.wsu.edu' === get_site()->domain ) {
 	require_once __DIR__ . '/includes/comments.php';
 	require_once __DIR__ . '/includes/voting.php';
 	require_once __DIR__ . '/includes/faculty-user-signup.php';
