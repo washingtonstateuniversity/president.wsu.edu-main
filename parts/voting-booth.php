@@ -40,7 +40,7 @@ if ( $voter_ids && is_array( $voter_ids ) && in_array( wp_get_current_user()->ID
 
 	<?php } else { ?>
 
-		<div class="vote-cast"><a href="http://facsen.wp.wsu.edu/wp-login.php?redirect_to=<?php echo 'https://' . esc_attr( $_SERVER['HTTP_HOST'] ) . esc_attr( $_SERVER['REQUEST_URI'] ); ?>">Login</a> with WSU Credentials to Vote.</div>
+		<div class="vote-cast"><a href="<?php echo esc_url( get_home_url() ); ?>/wp-login.php?redirect_to=<?php echo 'https://' . esc_attr( $_SERVER['HTTP_HOST'] ) . esc_attr( $_SERVER['REQUEST_URI'] ); ?>">Login</a> with WSU Credentials to Vote.</div>
 
 	<?php } ?>
 
