@@ -77,7 +77,7 @@
 	$voting = get_post_meta( get_the_ID(), '_wsu_votes', true );
 
 	if ( 'enabled' === $voting ) {
-		
+
 		get_template_part( 'parts/voting-booth' );
 
 		if ( is_user_logged_in() ) {
