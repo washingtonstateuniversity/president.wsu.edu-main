@@ -18,7 +18,7 @@ if ( $voter_ids && is_array( $voter_ids ) && in_array( wp_get_current_user()->ID
 
 	<div class="vote-tally">Vote tally: <span><?php echo esc_html( $vote_tally ); ?></span></div>
 
-	<?php if ( ! $disabled ) { ?>
+	<?php if ( ! $disabled && is_user_logged_in() ) { ?>
 
 		<label>
 			<input type="radio" name="vote" value="for">
@@ -34,9 +34,13 @@ if ( $voter_ids && is_array( $voter_ids ) && in_array( wp_get_current_user()->ID
 
 		<div class="thank-you" aria-hidden="true">Thank you for casting your vote!</div>
 
-	<?php } else { ?>
+	<?php } elseif ( is_user_logged_in() && $disabled ) { ?>
 
 		<div class="vote-cast">You have already voted on this post.</div>
+
+	<?php } else { ?>
+
+		<div class="vote-cast"><a href="http://facsen.dev.wp.wsu.edu/wp-login.php?redirect_to=<?php echo 'https://' . esc_attr( $_SERVER['HTTP_HOST'] ) . esc_attr( $_SERVER['REQUEST_URI'] ); ?>">Login</a> with WSU Credentials to Vote.</div>
 
 	<?php } ?>
 
