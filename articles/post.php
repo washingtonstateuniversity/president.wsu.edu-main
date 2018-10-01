@@ -76,16 +76,22 @@
 	// and voting is enabled for the post.
 	$voting = get_post_meta( get_the_ID(), '_wsu_votes', true );
 
-	if ( ( 'facsen.wsu.edu' === get_site()->domain || 'stage.web.wsu.edu' === get_site()->domain ) && is_user_logged_in() && 'enabled' === $voting ) :
-		wp_enqueue_script( 'wsu-voting', get_stylesheet_directory_uri() . '/js/voting-booth.js', array( 'jquery' ), spine_get_child_version(), true );
-
-		wp_localize_script( 'wsu-voting', 'voting_booth', array(
-			'ajax_url' => admin_url( 'admin-ajax.php' ),
-			'nonce' => wp_create_nonce( 'wsu-voting' ),
-		) );
-
+	if ( 'enabled' === $voting ) {
+		
 		get_template_part( 'parts/voting-booth' );
-	endif;
+
+		if ( is_user_logged_in() ) {
+
+			wp_enqueue_script( 'wsu-voting', get_stylesheet_directory_uri() . '/js/voting-booth.js', array( 'jquery' ), spine_get_child_version(), true );
+
+			wp_localize_script( 'wsu-voting', 'voting_booth', array(
+				'ajax_url' => admin_url( 'admin-ajax.php' ),
+				'nonce' => wp_create_nonce( 'wsu-voting' ),
+			) );
+
+		} // End if
+	}
+
 	?>
 
 	<?php
