@@ -10,7 +10,7 @@ $voter_ids = get_post_meta( get_the_ID(), '_wsu_votes_ids', true );
 $disabled = false;
 
 if ( $voter_ids && is_array( $voter_ids ) && in_array( wp_get_current_user()->ID, $voter_ids, true ) ) {
-	// $disabled = true;
+	 $disabled = true;
 }
 ?>
 
