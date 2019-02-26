@@ -97,9 +97,16 @@
 	<?php
 	// Load up the comment template if this is the faculty senate site
 	// and comments are open or the post has at least one comment.
-	if ( ( 'facsen.wsu.edu' === get_site()->domain || 'stage.web.wsu.edu' === get_site()->domain ) && ( comments_open() || get_comments_number() ) ) :
+	if ( ( 'facsen.wsu.edu' === get_site()->domain || 'stage.web.wsu.edu' === get_site()->domain ) && ( comments_open() || get_comments_number() ) ) {
+
+		if ( ! is_singular() ) {
+
+			echo '<a class="view-comment-response" href="' . esc_url( get_permalink() ) . '">View Response</a>';
+
+		}
+
 		comments_template();
-	endif;
+	}
 	?>
 
 	<footer class="article-footer">
