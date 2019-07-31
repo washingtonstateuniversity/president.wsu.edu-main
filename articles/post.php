@@ -95,11 +95,18 @@
 	?>
 
 	<?php
-	// Load up the comment template if this is the faculty senate site
-	// and comments are open or the post has at least one comment.
-	if ( ( 'facsen.wsu.edu' === get_site()->domain || 'stage.web.wsu.edu' === get_site()->domain ) && ( comments_open() || get_comments_number() ) ) :
-		comments_template();
-	endif;
+	// Check if this is the faculty senate site.
+	if ( ( 'facsen.wsu.edu' === get_site()->domain || 'stage.web.wsu.edu' === get_site()->domain ) ) {
+		// Load the comments template if comments are open or the post has at least one comment.
+		if ( comments_open() || get_comments_number() ) {
+			comments_template();
+		}
+
+		// Display the comment list if this is the resolved concerns category archive.
+		if ( is_category( 'resolved-concerns' ) ) {
+			get_template_part( 'parts/comment-list' );
+		}
+	}
 	?>
 
 	<footer class="article-footer">
