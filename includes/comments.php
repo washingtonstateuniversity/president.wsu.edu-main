@@ -76,6 +76,7 @@ function list_arguments() {
 		'type' => 'comment',
 		'avatar_size' => 0,
 		'format' => 'html5',
+		'page' => get_the_ID(),
 	);
 }
 
